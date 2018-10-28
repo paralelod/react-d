@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { btn } from './Button.module.scss';
+import { button } from './Button.module.scss';
 
 const Button = (props) => {
   return (
       <button
-        className={btn}
+          className={button}
+        // className={props.class}
         onClick={() => alert('I am styled with CSS Modules')}
       >
         {props.content}

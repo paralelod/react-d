@@ -1,14 +1,29 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "./type.scss";
+
+html,
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+  // font-size: 18px;
+  font-family: $font-sans-serif;
+  color: $dark;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  line-height: normal;
 }
+
+
+body {
+  background-color: $site-bg;
+}
+
+* {
+    @include vendor-prefix('box-sizing','border-box');
+}
+
+*:focus {outline: none;}

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.scss';
 
 import Button from './components/blocks/Button';
+import { btn } from './components/blocks/Button.module.scss';
 
 
 class App extends Component {
@@ -14,7 +15,8 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <Button content="Sample Button"/>
+          <Button content="Sample Button" class="btn"/>
+          <Button content="Sample Button" class={btn}/>
         </header>
       </div>
     );
