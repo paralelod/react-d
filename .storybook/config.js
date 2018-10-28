@@ -1,5 +1,6 @@
 import { configure } from '@storybook/react';
-import '../src/index.css';
+import '../src/index.scss';
+import { btn } from '../src/components/blocks/Button.module.scss';
 
 const req = require.context('../src', true, /.stories.js$/);
 
