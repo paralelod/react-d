@@ -1,26 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React from 'react'; 
+import { connect } from 'react-redux';
+import Nav from './components/containers/Nav/Nav';
+import Home from './components/content/Home';
+import PropTypes from 'prop-types';
 
-import Button from './components/blocks/Button';
-import { btn } from './components/blocks/Button.module.scss';
+const mapStateToProps = state => ({
+  appName: state.appName
+});
 
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <Button content="Sample Button" class="btn"/>
-          <Button content="Sample Button" class={btn}/>
-        </header>
+      <div>
+        <Nav/>
+        <br/><br/><br/><br/>
+        <Home/>
+        {this.props.children}
       </div>
     );
   }
 }
 
-export default App;
+// App.contextTypes = {
+//   router: React.PropTypes.object.isRequired
+// };
+  
+
+export default connect(mapStateToProps, () => ({}) )(App);

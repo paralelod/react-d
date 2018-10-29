@@ -1,3 +1,11 @@
+a {
+  color: $dark;
+  text-decoration: underline;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
 
 h1, h2, h3 {
   font-weight: 300;
